@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Event Splash</string>
+    <string name="action_login">Login</string>
+    <string name="event_brite_base_url">https://www.eventbriteapi.com/v3/</string>
+    <string name="event_brite_auth_token">H7F64OEURMM4B6QBKUAY</string>
+    <string name="event_brite_search_api_path">events/search/</string>
+    <string name="fine_location_granted_bundle_arg_key">fine_location_granted</string>
+    <string name="event_brite_venue_api_path">venues/</string>
+    <string name="open_drawer">open_drawer</string>
+    <string name="close_drawer">close_drawer</string>
+    <string name="fingerprint_reader_text">Put your finger on the sensor and lift after you feel a vibration</string>
+    <string name="login_text">LOGIN</string>
+    <string name="login_status_pref_name">login_status</string>
+    <string name="logged_in_pref_name">logged_in</string>
+    <string name="logout_text">LOGOUT</string>
+    <string name="username_hint">Username</string>
+    <string name="username_extra_key">username</string>
+    <string name="logged_in_username_pref_name">logged_in_username</string>
+    <string name="username_pref_name">username</string>
+    <string name="detail_when_header">When:</string>
+    <string name="detail_where_header">Where:</string>
+    <string name="event_detail_binder_key">event_detail_binder</string>
+    <string name="event_detail_bundle_key">event_detail_bundle</string>
+</resources>
