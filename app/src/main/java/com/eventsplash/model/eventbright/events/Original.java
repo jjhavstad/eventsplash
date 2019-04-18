@@ -45,7 +45,7 @@ public class Original {
         this.height = height;
     }
 
-    @BindingAdapter({"bind:url"})
+    @BindingAdapter({"url"})
     public static void loadImage(ImageView view, String url) {
         Glide.with(view.getContext()).load(url).into(view);
     }

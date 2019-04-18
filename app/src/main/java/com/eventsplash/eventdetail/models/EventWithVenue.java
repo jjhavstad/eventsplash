@@ -51,7 +51,7 @@ public class EventWithVenue implements View.OnClickListener {
         this.favoriteImage = favoriteImage;
     }
 
-    @BindingAdapter({"bind:favoriteImage"})
+    @BindingAdapter({"favoriteImage"})
     public static void loadImage(ImageView view, EventWithVenue eventWithVenue) {
         applyFavoriteImage(view.getContext(),
                 view,

@@ -27,7 +27,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:scaleType="fitCenter"
-                    bind:favoriteImage="@{eventWithVenue}"
+                    favoriteImage="@{eventWithVenue}"
                     android:onClick="@{eventWithVenue::onClick}"/>
             </android.support.v7.widget.Toolbar>
 
@@ -48,7 +48,7 @@
                     android:layout_height="wrap_content"
                     android:scaleType="fitCenter"
                     android:layout_margin="4dp"
-                    bind:url="@{eventWithVenue.event.logo.original.url}"/>
+                    url="@{eventWithVenue.event.logo.original.url}"/>
 
                 <TextView
                     android:id="@+id/event_title"
