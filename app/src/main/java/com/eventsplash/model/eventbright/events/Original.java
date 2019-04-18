@@ -1,13 +1,13 @@
 
 package com.eventsplash.model.eventbright.events;
 
-import android.databinding.BindingAdapter;
-import android.graphics.drawable.Drawable;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+
+import androidx.databinding.BindingAdapter;
 
 public class Original {
 

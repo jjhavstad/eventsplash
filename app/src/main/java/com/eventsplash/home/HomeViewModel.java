@@ -1,8 +1,5 @@
 package com.eventsplash.home;
 
-import android.content.Context;
-import android.support.annotation.NonNull;
-
 import com.eventsplash.base.Lifecycle;
 import com.eventsplash.model.eventbright.events.Event;
 import com.eventsplash.networking.EventBriteRequestManager;
@@ -11,6 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import androidx.annotation.NonNull;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.processors.AsyncProcessor;
 import io.reactivex.subscribers.DisposableSubscriber;

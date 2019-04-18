@@ -1,17 +1,19 @@
 package com.eventsplash.eventdetail;
 
 import android.content.Intent;
-import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.eventsplash.R;
 import com.eventsplash.databinding.ActivityDetailBinding;
 import com.eventsplash.eventdetail.models.EventWithVenue;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.databinding.DataBindingUtil;
 
 /**
  * Created by jonathanhavstad on 2/28/18.

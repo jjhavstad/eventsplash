@@ -9,8 +9,6 @@ import junit.framework.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.security.KeyStore;
@@ -46,10 +44,9 @@ public class CipherGeneratedTest {
     @Test
     public void test_cipherGenerated() throws Exception {
         FingerprintLoginComponent fingerprintLoginComponent = DaggerFingerprintLoginComponent.builder()
-                .fingerprintLoginModule(new FingerprintLoginModule("TestKeystore"))
+                .fingerprintLoginModule(new FingerprintLoginModule("TestKeystore", true))
                 .build();
 
-        Assert.assertTrue(fingerprintLoginComponent.providesIsCipherInitialized());
         Assert.assertNotNull(fingerprintLoginComponent.providesCipher());
     }
 }

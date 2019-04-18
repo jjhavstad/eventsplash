@@ -1,14 +1,14 @@
 package com.eventsplash;
 
-import android.support.test.espresso.Espresso;
-import android.support.test.espresso.assertion.ViewAssertions;
-import android.support.test.espresso.matcher.ViewMatchers;
-import android.support.test.rule.ActivityTestRule;
-
 import com.eventsplash.base.MainActivity;
 
 import org.junit.Rule;
 import org.junit.Test;
+
+import androidx.test.espresso.Espresso;
+import androidx.test.espresso.assertion.ViewAssertions;
+import androidx.test.espresso.matcher.ViewMatchers;
+import androidx.test.rule.ActivityTestRule;
 
 /**
  * Created by jonathanhavstad on 2/25/18.

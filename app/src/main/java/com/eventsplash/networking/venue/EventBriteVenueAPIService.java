@@ -1,11 +1,10 @@
 package com.eventsplash.networking.venue;
 
-import android.support.annotation.NonNull;
-
 import com.eventsplash.model.eventbright.venues.Venue;
 import com.eventsplash.networking.retrofit.EventBriteAPI;
 import com.eventsplash.networking.venue.exception.EventBriteVenueRequestException;
 
+import androidx.annotation.NonNull;
 import io.reactivex.BackpressureStrategy;
 import io.reactivex.Flowable;
 import io.reactivex.android.schedulers.AndroidSchedulers;

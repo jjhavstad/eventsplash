@@ -1,6 +1,6 @@
 package com.eventsplash.base;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 /**
  * Created by jonathanhavstad on 2/24/18.

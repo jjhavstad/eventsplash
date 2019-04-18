@@ -1,7 +1,5 @@
 package com.eventsplash.networking;
 
-import android.support.annotation.NonNull;
-
 import com.eventsplash.eventdetail.models.EventWithVenue;
 import com.eventsplash.model.eventbright.events.Event;
 import com.eventsplash.model.eventbright.events.SearchResults;
@@ -16,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import androidx.annotation.NonNull;
 import io.reactivex.Flowable;
 
 /**

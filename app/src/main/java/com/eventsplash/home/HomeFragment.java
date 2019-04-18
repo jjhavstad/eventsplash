@@ -3,7 +3,6 @@ package com.eventsplash.home;
 import android.content.Context;
 import android.location.Location;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 
 import com.eventsplash.R;
 import com.eventsplash.base.BaseFragment;
@@ -11,6 +10,8 @@ import com.eventsplash.base.Lifecycle;
 import com.eventsplash.eventdetail.models.EventWithVenue;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
+
+import androidx.annotation.Nullable;
 
 /**
  * Created by jonathanhavstad on 2/24/18.

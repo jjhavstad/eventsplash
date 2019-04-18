@@ -1,7 +1,5 @@
 package com.eventsplash;
 
-import android.support.annotation.NonNull;
-
 import com.eventsplash.model.eventbright.events.SearchResults;
 import com.eventsplash.networking.EventBriteRequestManager;
 
@@ -12,6 +10,7 @@ import org.junit.Test;
 
 import java.util.concurrent.TimeUnit;
 
+import androidx.annotation.NonNull;
 import io.reactivex.Scheduler;
 import io.reactivex.android.plugins.RxAndroidPlugins;
 import io.reactivex.disposables.Disposable;

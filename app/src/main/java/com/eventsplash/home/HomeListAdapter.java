@@ -1,8 +1,5 @@
 package com.eventsplash.home;
 
-import android.databinding.DataBindingUtil;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +10,10 @@ import com.eventsplash.eventdetail.handlers.EventWithVenueClickHandler;
 import com.eventsplash.eventdetail.models.EventWithVenue;
 
 import java.util.List;
+
+import androidx.annotation.NonNull;
+import androidx.databinding.DataBindingUtil;
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Created by jonathanhavstad on 2/25/18.
