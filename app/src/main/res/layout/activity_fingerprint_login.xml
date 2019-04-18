@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.ConstraintLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/fingerprint_view"
@@ -12,6 +12,8 @@
         android:padding="16dp"
         android:textSize="24sp"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:text="@string/fingerprint_reader_text"/>
 
     <com.google.android.material.textfield.TextInputEditText
@@ -32,4 +34,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:src="@drawable/ic_fp_40px"/>
 
-</androidx.constraintlayout.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
