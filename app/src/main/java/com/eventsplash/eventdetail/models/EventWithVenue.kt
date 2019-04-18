@@ -2,9 +2,7 @@ package com.eventsplash.eventdetail.models
 
 import android.content.ContentValues
 import android.content.Context
-import android.database.Cursor
 import android.database.SQLException
-import android.graphics.drawable.Drawable
 import android.view.View
 import android.widget.ImageView
 
@@ -14,7 +12,6 @@ import com.eventsplash.model.eventbright.venues.Venue
 import com.eventsplash.providers.FavoritesProvider
 
 import androidx.core.content.ContextCompat
-import androidx.databinding.BindingAdapter
 
 /**
  * Created by jonathanhavstad on 2/24/18.
