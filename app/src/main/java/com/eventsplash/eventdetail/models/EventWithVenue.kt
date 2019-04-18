@@ -30,19 +30,19 @@ class EventWithVenue : View.OnClickListener {
         if (isUserLoggedIn(context)) {
             val c = context.contentResolver.query(FavoritesProvider.CONTENT_URI, null,
                     FavoritesProvider.SEARCH_BY_USER_NAME_AND_EVENT_NAME_SELECTION,
-                    arrayOf<String>(getUsername(context) ?: "", event?.name?.text ?: ""), null, null)
+                    arrayOf(getUsername(context) ?: "", event?.name?.text ?: ""), null, null)
             if (c != null) {
                 if (0 < c.count) {
                     context.contentResolver.delete(FavoritesProvider.CONTENT_URI,
                             FavoritesProvider.SEARCH_BY_USER_NAME_AND_EVENT_NAME_SELECTION,
-                            arrayOf<String>(getUsername(context) ?: "", event!!.name.text))
+                            arrayOf(getUsername(context) ?: "", event?.name?.text ?: "")) // I ❤️ Elvis
                     val favoriteDrawable = ContextCompat.getDrawable(context,
                             R.drawable.ic_favorite_border_white_24dp)
                     imageView.setImageDrawable(favoriteDrawable)
                 } else {
                     val contentValues = ContentValues()
                     contentValues.put(FavoritesProvider._USER_NAME, getUsername(context))
-                    contentValues.put(FavoritesProvider._EVENT_NAME, event!!.name.text)
+                    contentValues.put(FavoritesProvider._EVENT_NAME, event?.name?.text ?: "")
                     context.contentResolver.insert(FavoritesProvider.CONTENT_URI,
                             contentValues)
                     val favoriteDrawable = ContextCompat.getDrawable(context,
@@ -54,7 +54,7 @@ class EventWithVenue : View.OnClickListener {
                 try {
                     val contentValues = ContentValues()
                     contentValues.put(FavoritesProvider._USER_NAME, getUsername(context))
-                    contentValues.put(FavoritesProvider._EVENT_NAME, event!!.name.text)
+                    contentValues.put(FavoritesProvider._EVENT_NAME, event?.name?.text ?: "")
 
                     context.contentResolver.insert(FavoritesProvider.CONTENT_URI,
                             contentValues)
@@ -77,7 +77,7 @@ class EventWithVenue : View.OnClickListener {
             if (isUserLoggedIn(context)) {
                 val c = context.contentResolver.query(FavoritesProvider.CONTENT_URI, null,
                         FavoritesProvider.SEARCH_BY_USER_NAME_AND_EVENT_NAME_SELECTION,
-                        arrayOf<String>(getUsername(context) ?: "", eventWithVenue.event!!.name.text), null, null)
+                        arrayOf(getUsername(context) ?: "", eventWithVenue.event?.name?.text ?: ""), null, null)
                 if (c != null) {
                     if (0 < c.count) {
                         val favoriteDrawable = ContextCompat.getDrawable(context,
