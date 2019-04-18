@@ -1,6 +1,5 @@
 package com.eventsplash.eventdetail
 
-import android.content.Intent
 import android.os.Bundle
 
 import android.view.Menu
@@ -27,18 +26,16 @@ class EventDetailActivity : AppCompatActivity() {
 
         val args = intent.getBundleExtra(getString(R.string.event_detail_bundle_key))
         val eventDetailBinder = args.getBinder(getString(R.string.event_detail_binder_key)) as EventDetailBinder
-        if (eventDetailBinder != null) {
-            eventWithVenue = eventDetailBinder.eventWithVenue
-        }
+        eventWithVenue = eventDetailBinder.eventWithVenue
 
         val binding = DataBindingUtil.setContentView<ActivityDetailBinding>(this, R.layout.activity_detail)
         binding.eventWithVenue = eventWithVenue
 
         val toolbar = binding.root.findViewById<Toolbar>(R.id.detail_toolbar)
         setSupportActionBar(toolbar)
-        supportActionBar!!.setHomeButtonEnabled(true)
-        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
-        supportActionBar!!.title = eventWithVenue!!.event!!.name.text
+        supportActionBar?.setHomeButtonEnabled(true)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = eventWithVenue?.event?.name?.text
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
