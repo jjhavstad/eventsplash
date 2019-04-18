@@ -4,10 +4,9 @@ import com.eventsplash.login.components.DaggerFingerprintLoginComponent;
 import com.eventsplash.login.components.FingerprintLoginComponent;
 import com.eventsplash.login.modules.FingerprintLoginModule;
 
-import junit.framework.Assert;
-
 import org.junit.BeforeClass;
 import org.junit.Test;
+import static org.junit.Assert.assertNotNull;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -47,6 +46,6 @@ public class CipherGeneratedTest {
                 .fingerprintLoginModule(new FingerprintLoginModule("TestKeystore", true))
                 .build();
 
-        Assert.assertNotNull(fingerprintLoginComponent.providesCipher());
+        assertNotNull(fingerprintLoginComponent.providesCipher());
     }
 }
