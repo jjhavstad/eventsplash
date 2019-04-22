@@ -1,6 +1,8 @@
 
 package com.eventsplash.model.eventbright.venues;
 
+import androidx.annotation.Nullable;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -93,5 +95,19 @@ public class Venue {
 
     public void setLongitude(String longitude) {
         this.longitude = longitude;
+    }
+
+    @Override
+    public boolean equals(@Nullable Object obj) {
+        if (obj instanceof Venue) {
+            Venue venue = (Venue) obj;
+            return ((address == null && venue.address == null) || (address != null && address.equals(venue.address))) &&
+                    ((resourceUri == null && venue.resourceUri == null) || (resourceUri != null && resourceUri.equals(venue.resourceUri))) &&
+                    ((id == null && venue.id == null) || (id != null && id.equals(venue.id))) &&
+                    ((name == null && venue.name == null) || (name != null && name.equals(venue.name))) &&
+                    ((latitude == null && venue.latitude == null) || (latitude != null && latitude.equals(venue.latitude))) &&
+                    ((longitude == null && venue.longitude == null) || (longitude != null && longitude.equals(venue.longitude)));
+        }
+        return super.equals(obj);
     }
 }

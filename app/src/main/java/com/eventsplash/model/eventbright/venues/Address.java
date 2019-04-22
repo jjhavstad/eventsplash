@@ -3,6 +3,8 @@ package com.eventsplash.model.eventbright.venues;
 
 import android.text.TextUtils;
 
+import androidx.annotation.Nullable;
+
 import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -159,5 +161,26 @@ public class Address {
             cityStateZip = sb.toString();
         }
         return cityStateZip;
+    }
+
+    @Override
+    public boolean equals(@Nullable Object obj) {
+        if (obj instanceof Address) {
+            Address address = (Address) obj;
+            return ((address1 == null && address.address1 == null) || (address1 != null && address1.equals(address.address1))) &&
+                    ((address2 == null && address.address2 == null) || (address2 != null && address2.equals(address.address2))) &&
+                    ((city == null && address.city == null) || (city != null && city.equals(address.city))) &&
+                    ((region == null && address.region == null) || (region != null && region.equals(address.region))) &&
+                    ((postalCode == null && address.postalCode == null) || (postalCode != null && postalCode.equals(address.postalCode))) &&
+                    ((country == null && address.country == null) || (country != null && country.equals(address.country))) &&
+                    ((latitude == null && address.latitude == null) || (latitude != null && latitude.equals(address.latitude))) &&
+                    ((longitude == null && address.longitude == null) || (longitude != null && longitude.equals(address.longitude))) &&
+                    ((localizedAddressDisplay == null && address.localizedAddressDisplay == null) || (localizedAddressDisplay != null && localizedAddressDisplay.equals(address.localizedAddressDisplay))) &&
+                    ((localizedAreaDisplay == null && address.localizedAreaDisplay == null) || (localizedAreaDisplay != null && localizedAreaDisplay.equals(address.localizedAreaDisplay))) &&
+                    ((localizedMultiLineAddressDisplay == null && address.localizedMultiLineAddressDisplay == null) || (localizedMultiLineAddressDisplay != null && address.localizedMultiLineAddressDisplay != null &&
+                            localizedMultiLineAddressDisplay.size() == address.localizedMultiLineAddressDisplay.size()));
+
+        }
+        return super.equals(obj);
     }
 }

@@ -1,6 +1,8 @@
 
 package com.eventsplash.model.eventbright.events;
 
+import androidx.annotation.Nullable;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -29,4 +31,13 @@ public class Description {
         this.html = html;
     }
 
+    @Override
+    public boolean equals(@Nullable Object obj) {
+        if (obj instanceof Description) {
+            Description description = (Description) obj;
+            return ((text == null && description.text == null) || (text != null && text.equals(description.text))) &&
+                    ((html == null && description.html == null) || (html != null && html.equals(description.html)));
+        }
+        return super.equals(obj);
+    }
 }

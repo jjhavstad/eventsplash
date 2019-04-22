@@ -1,6 +1,8 @@
 
 package com.eventsplash.model.eventbright.events;
 
+import androidx.annotation.Nullable;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -40,4 +42,14 @@ public class End {
         this.utc = utc;
     }
 
+    @Override
+    public boolean equals(@Nullable Object obj) {
+        if (obj instanceof End) {
+            End end = (End) obj;
+            return ((timezone == null && end.timezone == null) || (timezone != null && timezone.equals(end.timezone))) &&
+                    ((local == null && end.local == null) || (local != null && local.equals(end.local))) &&
+                    ((utc == null && end.utc == null) || (utc != null && utc.equals(end.utc)));
+        }
+        return super.equals(obj);
+    }
 }

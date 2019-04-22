@@ -1,6 +1,8 @@
 
 package com.eventsplash.model.eventbright.events;
 
+import androidx.annotation.Nullable;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -414,4 +416,48 @@ public class Event {
         this.logo = logo;
     }
 
+    @Override
+    public boolean equals(@Nullable Object obj) {
+        if (obj instanceof Event) {
+            Event event = (Event) obj;
+            return ((name == null && event.name == null) || name != null && name.equals(event.name)) &&
+                    ((description == null && event.description == null) || (description != null && description.equals(event.description))) &&
+                    ((id == null && event.id == null) || (id != null && id.equals(event.id))) &&
+                    ((url == null && event.url == null) || (url != null && url.equals(event.url))) &&
+                    ((vanityUrl == null && event.vanityUrl == null) || (vanityUrl != null && vanityUrl.equals(event.vanityUrl))) &&
+                    ((start == null && event.start == null) || (start != null && start.equals(event.start))) &&
+                    ((end == null && event.end == null) || (end != null && end.equals(event.end))) &&
+                    ((organizationId == null && event.organizationId == null) || (organizationId != null && organizationId.equals(event.organizationId))) &&
+                    ((created == null && event.created == null) || (created != null && created.equals(event.created))) &&
+                    ((changed == null && event.changed == null) || (changed != null && changed.equals(event.changed))) &&
+                    ((capacity == null && event.capacity == null) || (capacity != null && capacity.equals(event.capacity))) &&
+                    ((capacityIsCustom == null && event.capacityIsCustom == null) || (capacityIsCustom != null && capacityIsCustom.equals(event.capacityIsCustom))) &&
+                    ((status == null && event.status == null) || (status != null && status.equals(event.status))) &&
+                    ((currency == null && event.currency == null) || (currency != null && currency.equals(event.currency))) &&
+                    ((listed == null && event.listed == null) || (listed != null && listed.equals(event.listed))) &&
+                    ((shareable == null && event.shareable == null) || (shareable != null && shareable.equals(event.shareable))) &&
+                    ((onlineEvent == null && event.onlineEvent == null) || (onlineEvent != null && onlineEvent.equals(event.onlineEvent))) &&
+                    ((txTimeLimit == null && event.txTimeLimit == null) || (txTimeLimit != null && txTimeLimit.equals(event.txTimeLimit))) &&
+                    ((hideStartDate == null && event.hideStartDate == null) || (hideStartDate != null && hideStartDate.equals(event.hideStartDate))) &&
+                    ((hideEndDate == null && event.hideEndDate == null) || (hideEndDate != null && hideEndDate.equals(event.hideEndDate))) &&
+                    ((locale == null && event.locale == null) || (locale != null && locale.equals(event.locale))) &&
+                    ((isLocked == null && event.isLocked == null) || (isLocked != null && isLocked.equals(event.isLocked))) &&
+                    ((privacySetting == null && event.privacySetting == null) || (privacySetting != null && privacySetting.equals(event.privacySetting))) &&
+                    ((isSeries == null && event.isSeries == null) || (isSeries != null && isSeries.equals(event.isSeries))) &&
+                    ((isSeriesParent == null && event.isSeriesParent == null) || (isSeriesParent != null && isSeriesParent.equals(event.isSeriesParent))) &&
+                    ((isReservedSeating == null && event.isReservedSeating == null) || (isReservedSeating != null && isReservedSeating.equals(event.isReservedSeating))) &&
+                    ((source == null && event.source == null) || (source != null && source.equals(event.source))) &&
+                    ((isFree == null && event.isFree == null) || (isFree != null && isFree.equals(event.isFree))) &&
+                    ((version == null && event.version == null) || (version != null && version.equals(event.version))) &&
+                    ((logoId == null && event.logoId == null) || (logoId != null && logoId.equals(event.logoId))) &&
+                    ((organizerId == null && event.organizerId == null) || (organizerId != null && organizerId.equals(event.organizerId))) &&
+                    ((venueId == null && event.venueId == null) || (venueId != null && venueId.equals(event.venueId))) &&
+                    ((categoryId == null && event.categoryId == null) || (categoryId != null && categoryId.equals(event.categoryId))) &&
+                    ((subcategoryId == null && event.subcategoryId == null) || (subcategoryId != null && subcategoryId.equals(event.subcategoryId))) &&
+                    ((formatId == null && event.formatId == null) || (formatId != null && formatId.equals(event.formatId))) &&
+                    ((resourceUri == null && event.resourceUri == null) || (resourceUri != null && resourceUri.equals(event.resourceUri))) &&
+                    ((logo == null && event.logo == null) || (logo != null && logo.equals(event.logo)));
+        }
+        return super.equals(obj);
+    }
 }

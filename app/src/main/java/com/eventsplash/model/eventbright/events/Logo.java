@@ -1,6 +1,8 @@
 
 package com.eventsplash.model.eventbright.events;
 
+import androidx.annotation.Nullable;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -84,4 +86,18 @@ public class Logo {
         this.edgeColorSet = edgeColorSet;
     }
 
+    @Override
+    public boolean equals(@Nullable Object obj) {
+        if (obj instanceof Logo) {
+            Logo logo = (Logo) obj;
+            return ((cropMask == null && logo.cropMask == null) || (cropMask != null && cropMask.equals(logo.cropMask))) &&
+                    ((original == null && logo.original == null) || (original != null && original.equals(logo.original))) &&
+                    ((id == null && logo.id == null) || (id != null && id.equals(logo.id))) &&
+                    ((url == null && logo.url == null) || (url != null && url.equals(logo.url))) &&
+                    ((aspectRatio == null && logo.aspectRatio == null) || (aspectRatio != null && aspectRatio.equals(logo.aspectRatio))) &&
+                    ((edgeColor == null && logo.edgeColor == null) || (edgeColor != null && edgeColor.equals(logo.edgeColor))) &&
+                    ((edgeColorSet == null && logo.edgeColorSet == null) || (edgeColorSet != null && edgeColorSet.equals(logo.edgeColorSet)));
+        }
+        return super.equals(obj);
+    }
 }

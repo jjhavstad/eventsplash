@@ -7,6 +7,7 @@ import com.bumptech.glide.Glide;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import androidx.annotation.Nullable;
 import androidx.databinding.BindingAdapter;
 
 public class Original {
@@ -48,5 +49,16 @@ public class Original {
     @BindingAdapter({"url"})
     public static void loadImage(ImageView view, String url) {
         Glide.with(view.getContext()).load(url).into(view);
+    }
+
+    @Override
+    public boolean equals(@Nullable Object obj) {
+        if (obj instanceof Original) {
+            Original original = (Original) obj;
+            return ((url == null && original.url == null) || (url != null && url.equals(original.url))) &&
+                    ((width == null && original.width == null) || (width != null && width.equals(original.width))) &&
+                    ((height == null && original.height == null) || (height != null && height.equals(original.height)));
+        }
+        return super.equals(obj);
     }
 }

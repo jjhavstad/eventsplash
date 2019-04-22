@@ -43,14 +43,6 @@ public class EventBriteRequestManager {
         eventBriteVenueAPIService = eventBriteComponent.providesEventBriteVenueAPIService();
     }
 
-    public boolean isRequestingSearch() {
-        return eventBriteSearchAPIService.isRequestingSearch();
-    }
-
-    public boolean isRequestingVenueInformation() {
-        return eventBriteVenueAPIService.isRequestingVenueInformation();
-    }
-
     public Flowable<SearchResults> requestSearch() {
         return eventBriteSearchAPIService.searchAll();
     }
